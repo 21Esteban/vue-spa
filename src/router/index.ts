@@ -33,6 +33,24 @@ const router = createRouter({
         {
           path: '/pokemon/:id',
           name: 'pokemon',
+          beforeEnter:[
+
+            (to,from,next)=>{
+              //miramos en el localStorage si ese usuario esta registrado pra dejarlo pasar a la siguiente rta , sino que lo lleve al login
+              const userId = localStorage.getItem("userId")
+
+              //aqui guardamos el path a el que el usuario queria ir para que cuando se loguee lo lleve ahi
+              localStorage.setItem("lastPath",to.path)
+
+              if (!userId){
+                return next({
+                  name:"login"
+                })
+              }
+
+              return next()
+            }
+          ],
           props: true,
           component: () => import('@/modules/pokemons/pages/PokemonPage.vue'),
         },
