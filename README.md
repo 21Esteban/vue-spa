@@ -1,3 +1,8 @@
+![image](https://github.com/user-attachments/assets/1eb9120b-dd90-4af2-abcd-9d7e0974d0a0)
+![image](https://github.com/user-attachments/assets/34fe35dd-0904-4a35-a131-48cb9113532e)
+![image](https://github.com/user-attachments/assets/21694913-904d-4897-9748-949bbad4f244)
+
+
 # vue-spa
 
 This template should help get you started developing with Vue 3 in Vite.
